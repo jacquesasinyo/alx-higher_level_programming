@@ -8,9 +8,3 @@ def uppercase(str):
         new_str += str[i]
 
     print('{0}'.format(new_str))
-© 2022 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-

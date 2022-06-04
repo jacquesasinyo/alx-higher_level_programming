@@ -7,8 +7,3 @@ def print_last_digit(number):
 
     print(last_digit, end='')
     return last_digit
-© 2022 GitHub, Inc.
-Terms
-Privacy
-Security
-
