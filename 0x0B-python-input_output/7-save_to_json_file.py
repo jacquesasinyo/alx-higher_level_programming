@@ -1,14 +1,18 @@
 #!/usr/bin/python3
-"""
-    6-from_json_string.py
-    Function that writes an Object to \
-    a text file, using a JSON representation.
-"""
+'''
+Write a function that writes an
+Object to a text file, using a
+JSON representation
+'''
+
 import json
 
 
 def save_to_json_file(my_obj, filename):
-    """Function that writes an Object to \
-    a text file, using a JSON representation."""
-    with open(filename, mode='w', encoding='utf-8') as f:
-        f.write(json.dumps(my_obj))
+    '''
+    Writes object to text file using JSON
+    '''
+    if filename is None:
+        return
+    with open(filename, 'w', encoding='utf-8') as f:
+        json_var = json.dump(my_obj, f)

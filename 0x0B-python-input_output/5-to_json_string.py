@@ -1,11 +1,14 @@
 #!/usr/bin/python3
-"""
-    5-to_json_string.py
-    Returns the JSON representation of an object (string):
-"""
+'''
+Write a function that returns the JSON
+representation of an object (string)
+'''
+
 import json
 
 
 def to_json_string(my_obj):
-    """Returns the JSON representation of an object (string):"""
+    '''
+    Return dictionary as to JSON
+    '''
     return json.dumps(my_obj)

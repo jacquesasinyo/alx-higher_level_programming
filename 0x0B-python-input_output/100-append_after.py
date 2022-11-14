@@ -1,17 +1,19 @@
 #!/usr/bin/python3
-"""
-    0-read_file
-    Reads a text file (UTF8) and prints it to stdout
-"""
+'''
+Write a function that inserts a line of text to a file,
+after each line containing a specific string (see example):
+'''
 
 
 def append_after(filename="", search_string="", new_string=""):
-    """Reads a text file (UTF8) and prints it to stdout"""
-    text = ""
-    with open(filename, mode="r", encoding='utf-8') as f:
+    '''
+    Appends after line with string
+    '''
+    append_text = ""
+    with open(filename, 'r', encoding='utf-8') as f:
         for line in f:
-            text += line
+            append_text += line
             if search_string in line:
-                text += new_string
-    with open(filename, mode="w", encoding='utf-8') as f:
-        f.write(text)
+                append_text += new_string
+    with open(filename, 'w', encoding='utf-8') as f:
+        f.write(append_text)

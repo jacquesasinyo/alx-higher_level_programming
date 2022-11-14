@@ -1,30 +1,24 @@
 #!/usr/bin/python3
-"""
-    0-read_file
-    Reads a text file (UTF8) and prints it to stdout
-"""
+
+'''
+Create a function def pascal_triangle(n):
+that returns a list of lists of integers
+representing the Pascal’s triangle of n
+'''
 
 
 def pascal_triangle(n):
-    """Reads a text file (UTF8) and prints it to stdout"""
-    if n <= 0:
-        return []
-    trian = []
-
-    if n >= 1:
-        row = []
-        row.append(1)
-        trian.append(row)
-
-    if n > 1:
-        for i in range(2, n + 1):
-            row = []
-            for j in range(i):
-                if j == 0:
-                    row.append(1)
-                elif j == i - 1:
-                    row.append(1)
-                else:
-                    row.append(trian[i - 2][j - 1] + trian[i - 2][j])
-            trian.append(row)
-    return trian
+    '''
+    Create a function def pascal_triangle(n):
+    that returns a list of lists of integers
+    representing the Pascal’s triangle of n
+    '''
+    triangle = []
+    for position in range(1, n + 1):
+        triangle.append([1] * position)
+    for y in range(2, n):
+        row = triangle[y]
+        prev_row = triangle[y - 1]
+        for x in range(1, len(row) - 1):
+            row[x] = prev_row[x - 1] + prev_row[x]
+    return triangle
